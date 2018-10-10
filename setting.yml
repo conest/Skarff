@@ -1,0 +1,26 @@
+
+# Running Environment (production, development)
+runningEnv: development
+
+# listened port: 80, 443, 3000
+port: 3000
+
+# logger
+logger:
+  use: true
+  logFolder: log
+
+# Session
+session:
+  use: false
+  sessionSecret: 6fb76d964e847cc2
+  # in ms, example: 1000 * 60 * 60 * 24 = 86400000 = 24h
+  sessionAge: 86400000
+
+database:
+  use: false
+  dbUser:
+  dbPass:
+  dbName:
+  dbHost:
+  dbPort:
