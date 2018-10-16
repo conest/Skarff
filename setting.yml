@@ -6,6 +6,21 @@ env: development
 # listened port: 80, 443, 3000 ...
 port: 3000
 
+# https
+https:
+  use: false
+  key:
+  cert:
+  passphrase:
+
+# port redirection, always use with https(redirect from 80 to 443)
+redirection:
+  use: false
+  # status: 307(temporary redirect) 301(moved permanently)
+  statusCode: 307
+  # the listening port which will redirect to main port
+  listenPort: 80
+
 # logger
 logger:
   use: true
@@ -26,11 +41,3 @@ session:
   secret: 6fb76d964e847cc2
   # in ms, example: 1000 * 60 * 60 * 24 = 86400000 = 24h
   age: 86400000
-
-database:
-  use: false
-  dbUser:
-  dbPass:
-  dbName:
-  dbHost:
-  dbPort:

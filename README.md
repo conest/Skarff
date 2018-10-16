@@ -1,6 +1,6 @@
 # Skarff
 
-Scarff是一个基于Nodejs, koa的Web服务器框架。
+Skarff是一个基于Nodejs, koa的Web服务器框架。
 
 提供了基础常用的设置。独立出了路由，模版。默认配置好了简单的log输出，以此可以快速地开始对于网站的建设。
 

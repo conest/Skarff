@@ -1,5 +1,5 @@
 *.DS_Store*
-/Data
+/temp
 /log
 node_modules/
 dist/

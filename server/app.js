@@ -17,12 +17,15 @@ const errorHandler = require('./router/errorHandler');
 const SETTING = require('./model/loadSetting');
 const PUBLIC_DIC = './public';
 
+SETTING.rootPath = __dirname;
 app.context.setting = SETTING;
+
+// Protocol setting & listening. HTTP / HTTPS
+require('./model/protocol')(app, SETTING);
 
 //======================================
 // loading middlewares
 //======================================
-app.listen(SETTING.port);
 
 const mwArray = [];
 
