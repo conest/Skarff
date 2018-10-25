@@ -7,14 +7,14 @@ env: development
 port: 3000
 
 # https
-https:
+https: #
   use: false
   key:
   cert:
   passphrase:
 
-# port redirection, always use with https(redirect from 80 to 443)
-redirection:
+# port redirection, always use with https(like redirect from 80 to 443)
+redirection: #
   use: false
   # status: 307(temporary redirect) 301(moved permanently)
   statusCode: 307
@@ -22,7 +22,7 @@ redirection:
   listenPort: 80
 
 # logger
-logger:
+logger: #
   use: true
   logFolder: log
   # logger level
@@ -32,12 +32,12 @@ logger:
   logLevel: 2
 
 # zip compress
-compress:
+compress: #
   use: true
 
 # Session
-session:
+session: #
   use: false
-  secret: 6fb76d964e847cc2
+  secret: 
   # in ms, example: 1000 * 60 * 60 * 24 = 86400000 = 24h
   age: 86400000

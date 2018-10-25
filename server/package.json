@@ -1,6 +1,6 @@
 {
-  "name": "koa-server",
-  "version": "1.0.0",
+  "name": "skarff",
+  "version": "0.2.1",
   "description": "",
   "main": "app.js",
   "scripts": {
