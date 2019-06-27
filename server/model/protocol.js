@@ -7,7 +7,7 @@ const https = require('https');
 
 module.exports = function(app, SETTING) {
 
-  if (SETTING.https.enable) {
+  if (SETTING.https.enabled) {
 
     // using HTTPS
     let keyPath = path.resolve(SETTING.rootPath, SETTING.https.keyPath);
