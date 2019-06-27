@@ -8,10 +8,10 @@ port: 3000
 
 # https
 https: #
-  use: false
-  key:
-  cert:
-  passphrase:
+  enabled: false # true if enabled https mode.
+  keyPath: # relative path to key file
+  certPath: # relative path to cert file
+  passphraseString: # optional, plan string for passphrases if any. 
 
 # port redirection, always use with https(like redirect from 80 to 443)
 redirection: #
