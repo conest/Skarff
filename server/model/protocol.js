@@ -7,11 +7,11 @@ const https = require('https');
 
 module.exports = function(app, SETTING) {
 
-  if (SETTING.https.use) {
+  if (SETTING.https.enabled) {
 
     // using HTTPS
-    let keyPath = path.resolve(SETTING.rootPath, SETTING.https.key);
-    let certPath = path.resolve(SETTING.rootPath, SETTING.https.cert);
+    let keyPath = path.resolve(SETTING.rootPath, SETTING.https.keyPath);
+    let certPath = path.resolve(SETTING.rootPath, SETTING.https.certPath);
 
     if ( !fs.existsSync(keyPath) || !fs.existsSync(certPath) ){
         console.error('Can not found HTTPS Keypair');
