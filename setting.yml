@@ -15,7 +15,7 @@ https: #
 
 # port redirection, always use with https(like redirect from 80 to 443)
 redirection: #
-  use: false
+  enabled: false
   # status: 307(temporary redirect) 301(moved permanently)
   statusCode: 307
   # the listening port which will redirect to main port
@@ -23,7 +23,7 @@ redirection: #
 
 # logger
 logger: #
-  use: true
+  enabled: true
   logFolder: log
   # logger level
   # 1: save all log
@@ -33,11 +33,11 @@ logger: #
 
 # zip compress
 compress: #
-  use: true
+  enabled: true
 
 # Session
 session: #
-  use: false
+  enabled: false
   secret: 
   # in ms, example: 1000 * 60 * 60 * 24 = 86400000 = 24h
   age: 86400000

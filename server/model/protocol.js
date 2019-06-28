@@ -25,7 +25,7 @@ module.exports = function(app, SETTING) {
     https.createServer(options, app.callback()).listen(SETTING.port);
 
     // HTTP redirection
-    if (SETTING.redirection.use) {
+    if (SETTING.redirection.enabled) {
       const statusCode = SETTING.redirection.statusCode;
       const listenPort = SETTING.redirection.listenPort;
 

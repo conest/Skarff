@@ -29,19 +29,19 @@ require('./model/protocol')(app, SETTING);
 
 const mwArray = [];
 
-if ( SETTING.logger.use ) {
+if ( SETTING.logger.enabled ) {
   mwArray.push(require('./model/logger')(SETTING));
 }
 
 mwArray.push(errorHandler);
 mwArray.push(helmet());
 
-if ( SETTING.compress.use ) {
+if ( SETTING.compress.enabled ) {
   const compress = require('koa-compress');
   mwArray.push(compress());
 }
 
-if ( SETTING.session.use ){
+if ( SETTING.session.enabled ){
   const session = require('koa-session');
   const CONFIG = {
     secret: SETTING.session.secret,
